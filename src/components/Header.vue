@@ -1,7 +1,7 @@
 <script>
 import logo from '../assets/img/logo_sitio_web_victoria.png';
 import NavigationItems from './NavigationItems.vue';
-import {animateMenu} from '../assets/js/animation.js';
+import { animateMenu } from '../assets/js/animation.js';
 export default {
     name: 'Header',
     components: {
@@ -10,11 +10,13 @@ export default {
     data() {
         return {
             logo,
+            nombre:'ictoria',
+            opcion:'Portafolio',
             navItems: [
                 { name: "Home", iconClass: "fa-solid fa-house", link: "/" },
-                { name: "Skills", iconClass: "fa-solid fa-book", link: "/" },
-                { name: "Contacto", iconClass: "fa-solid fa-paper-plane", link: "/" },
-                { name: "Perfil", iconClass: "fa-solid fa-circle-user", link: "/" },
+                { name: "Skills", iconClass: "fa-solid fa-book", link: "/skills" },
+                { name: "Contacto", iconClass: "fa-solid fa-paper-plane", link: "/contactme" },
+                { name: "Perfil", iconClass: "fa-solid fa-circle-user", link: "/profile" },
             ],
             isMenuVisible: false
         }
@@ -30,55 +32,54 @@ export default {
 <template>
     <header class="header" id="header">
         <nav class="nav container">
-            <router-link :to="{name:'Home'}" class="nav_logo">
+            <router-link :to="{ name: 'Home' }" class="nav_logo">
                 <img :src="logo" class="logo" alt="">
-                <span class="nav__name_logo">ictoria</span>
+                <span class="nav__name_logo">{{ nombre }}</span>
             </router-link>
             <div class="bars__menu" @click="toggleMenu">
                 <span class="line1__bars-menu"></span>
                 <span class="line2__bars-menu"></span>
                 <span class="line3__bars-menu"></span>
             </div>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list"
-                :class="{ 'container-menu__visible': isMenuVisible }"
-                id="nav-menu"
-                >
-                    <NavigationItems 
-                    v-for="item in navItems" 
-                    :key="item.name" 
-                    :name="item.name"
-                    :iconClass="item.iconClass" 
-                    :link="item.link" 
-                    />
-                </ul>
+            <div class="container-menu" :class="{ 'container-menu__visible': isMenuVisible }">
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list" id="nav-menu">
+                        <NavigationItems v-for="item in navItems" 
+                            :key="item.name" 
+                            :name="item.name"
+                            :iconClass="item.iconClass" 
+                            :link="item.link" 
+                        />
+                    </ul>
+                </div>
+                <div class="nav__list2">
+                    <li class="nav__item">
+                        <router-link to="/portafolio" class="nav__link" active-class="nav__link--active"
+                            exact-active-class="nav__link--exact-active">
+                            <i class="fa-solid fa-briefcase nav__icon"></i>
+                            <span class="nav__name">{{ opcion }}</span>
+                        </router-link>
+                    </li>
+                </div>
+                <div class="container-menu__theme">
+                    <label for="checkbox" class="toggler">
+                        <input type="checkbox" id="checkbox">
+                        <span class="ball"></span>
+                        <i class="fa-solid fa-sun sun"></i>
+                        <i class="fa-solid fa-moon moon change-theme" id="theme-button"></i>
+                    </label>
+                </div>
             </div>
-            <div>
-                <li class="nav__item">
-                    <router-link 
-                    to="/" 
-                    class="nav__link"
-                    active-class="nav__link--active" 
-                    exact-active-class="nav__link--exact-active"
-                    >
-                        <i class="fa-solid fa-briefcase nav__icon"></i>
-                        <span class="nav__name">Portafolio</span>
-                    </router-link>
-                </li>
-            </div>
-            <div>
-                <label for="checkbox" class="toggler">
-                    <input type="checkbox" id="checkbox">
-                    <span class="ball"></span>
-                    <i class="fa-solid fa-sun sun"></i>
-                    <i class="fa-solid fa-moon moon change-theme" id="theme-button"></i>
-                </label>
-            </div>
-            
         </nav>
     </header>
 </template>
 <style>
+.header,
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -86,8 +87,6 @@ export default {
     width: 100%;
     z-index: var(--z-fixed);
     background: var(--header_dark);
-    display: flex;
-    justify-content: space-between;
     transition: .4s;
     height: var(--header);
     border-bottom: 1px solid var(--color_second);
@@ -114,37 +113,43 @@ export default {
 
 .nav {
     height: var(--header);
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     margin: 0 var(--m-24);
 }
+
+
 .nav__menu {
-  display: none; /* Ocultar el menú por defecto */
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width:767px) {
-
-    .nav__menu, .container-menu__visible {
+    .nav__menu {
         position: fixed;
         bottom: 0;
         left: 0;
         background: var(--header_dark);
         width: 100%;
-        height:4rem;
+        height: 4rem;
         padding: 0 1rem;
         display: grid;
         align-content: center;
         border-radius: 1.25rem 1.25rem 0 0;
         transition: .4s;
         border-top: 2px solid var(--color_second);
-        
     }
 
-    
+    .container-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+    }
+
+
 }
 
 #checkbox {
@@ -197,36 +202,132 @@ export default {
 #checkbox:checked+.ball {
     transform: translate(29px, -50%);
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
-    .nav_logo{
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-column: 1/6;
+    }
+
+    .nav_logo {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    .nav__name_logo{
+
+    .nav__name_logo {
         display: block;
-        font-size: 20px;
         color: var(--color_font);
+        font-size: var(--m-24);
         font-weight: 900;
     }
-    .nav__name_logo:hover{
-        color: var(--color_second);
-    }
-    .header{
-        grid-column: 1/6;
-        display:flex;
-        flex-direction: column;
-    }
+
     .bars__menu {
-            display: block;
+        display: block;
     }
-    .nav__menu {
+
+    .container-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: var(--header);
+        background: var(--header_dark);
+        width: 50%;
+        padding: 20px 0;
+        height: calc(100% - var(--header));
+        /* overflow-y: auto; */
+        left:100%;
+        transition: left .5s;
+    }
+    .nav__list2{
+        width:80%;
+        margin-bottom: 1rem;
+    }
+    .container-menu__visible {
+        left: 50%;
+    }
+
+    .nav__menu{
+        display: flex;
+        width:100% ;
+        height:500px;
+    }
+
+}
+@media screen and (min-width: 1024px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+            grid-column: 1/12;
+            height: 4rem;
+            width:100%;
+        }
+        .nav_logo {
+            display: flex;
             flex-direction: row;
-            justify-content: center;
-            width: 100%;
+            align-items: center;
+        }
+        .nav__name_logo {
+            display: block;
+            color: var(--color_font);
+            font-size: var(--m-24);
+            font-weight: 900;
+        }
+        .nav{
+            display: flex;
+            flex-direction: row;
+            height: 4rem;
+            margin:0 var(--m-48);
         }
 
+        .container-menu {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--header);
+            width: 800px;
+        }
+        .nav__menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            height: 100%;
+        }
+        .nav_img {
+            width: 58px;
+            height: 58px;
+        }
+        .container-menu__theme{
+            height: var(--header);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 2rem;
+        }
+        .toggler {
+            width: 4rem;
+            height: 2rem;
+            align-content: center;
+            
+        }
 
+        .ball {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
 
+        .bars__menu {
+            display: none;
+        }
 }
 </style>

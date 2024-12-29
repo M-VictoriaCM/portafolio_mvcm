@@ -17,7 +17,7 @@ export default {
       exact-active-class="nav__link--exact-active"
       >
       
-        <i :class="iconClass"></i>
+        <i :class="iconClass" class="nav__icon"></i>
         <span class="nav__name">{{ name }}</span>
       </router-link>
     </li>
