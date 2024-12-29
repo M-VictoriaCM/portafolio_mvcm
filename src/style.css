@@ -40,6 +40,7 @@
   /* tamaño de letras */
   --font-small: 1.5rem;
 }
+
 /* --------------- Estilos Generales  ---------------*/
 * {
   padding: 0;
@@ -48,20 +49,25 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .content {
   grid-column-end: span 4;
 }
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+
 body {
   /* background: var(--body_dark); */
   width: 100%;
   height: 100%;
 }
+
 .grid__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -69,9 +75,11 @@ body {
   overflow: hidden;
   align-items: center;
 }
+
 main {
   margin-top: var(--header);
 }
+
 .section {
   overflow: hidden;
   height: calc(100% - var(--header));
@@ -82,54 +90,63 @@ main {
   width: var(--m-8);
   background-color: var(--header_dark);
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--color_second_light);
   border-radius: 8px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--color_second);
 }
 
 /*======================== Navigation ==================================*/
 .nav__list,
-.nav__link{
-    display:flex;
+.nav__link {
+  display: flex;
 }
 
-.nav__link{
-    flex-direction: column;
-    align-items: center;
-    row-gap: .25rem;
-    color:var(--color_icon_inactive);
-    
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: .25rem;
+  color: var(--color_icon_inactive);
+
 }
-.nav__item{
+
+.nav__item {
   height: 100%;
   display: flex;
   align-items: center;
 }
-.nav__list{
-    margin-top: 1rem;
-    justify-content: space-around;
-    padding: 0;
-    height: 100%;
-}
-.nav__name{
-    font-size: .8rem;
+
+.nav__list {
+  margin-top: 1rem;
+  justify-content: space-around;
+  padding: 0;
+  height: 100%;
 }
 
-.nav__icon{
-    font-size: var(--m-24);
+.nav__name {
+  font-size: .8rem;
+}
+
+.nav__icon {
+  font-size: var(--m-24);
 }
 
 .nav__link--active .nav__icon,
 .nav__link--exact-active .nav__icon {
-  color:var(--color_primary); /* Color activo */
+  color: var(--color_primary);
+  /* Color activo */
 }
+
 .nav__link--active .nav__name,
 .nav__link--exact-active .nav__name {
-  color:var(--color_primary); /* Color activo para el texto */
+  color: var(--color_primary);
+  /* Color activo para el texto */
 }
+
 .bars__menu {
   width: var(--m-32);
   height: var(--m-32);
@@ -168,29 +185,104 @@ main {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .nav__list{
-    display: flex;
-  }
-  .nav__icon{
-    display: none;
-  }
+   
+
   .nav__list{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid red;
+    align-items:flex-start;
+    width: 80%;
   }
 
-.bars__menu{
-  display: block;
+  .bars__menu {
+    display: block;
+  }
+  .nav__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 14rem;
+    height: 4rem;
+    width:100%;
+
 }
-.container-menu__visible {
-  left: 0;
+.nav__item{
+  width:100%;
 }
+.nav__icon{
+  font-size: var(--m-32);
 }
+
+.nav__name {
+    font-size: var(--m-32);
+    line-height: var(--m-32);
+    font-weight: 900;
+    text-align: left;
+    padding-left: var(--m-20);
+}
+
+.nav__link--active .nav__name,
+.nav__link--exact-active .nav__name {
+  color: var(--color_second_dark);
+  width:100%;
+  transition: .5s;
+}
+.nav__link--active,
+.nav__link--exact-active  {
+  color: var(--color_second_dark);
+  border-bottom: 1px solid var(--color_primary_light);
+  width:100%;
+  transition: .5s;
+}
+
+}
+
 @media screen and (min-width: 1024px) {
-.bars__menu {
-  display: none;
+  .bars__menu {
+    display: none;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__item{
+    height: var(--header);
+    
+    width: 120px;
+  }
+
+  .nav__list{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    align-items: center;
+}
+.nav__link {
+    width: 8rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav__name {
+  font-size: var(--m-18);
+  text-align: center;
+  font-weight: 500;
+}
+.nav__link--active .nav__name,
+.nav__link--exact-active .nav__name {
+  color: var(--color_second_light);
+  transition: .5s;
+}
+.nav__link--active,
+.nav__link--exact-active  {
+  border-bottom:5px solid var(--color_second_dark);
+  border-left:2px solid var(--color_second_dark);
+  border-right:2px solid var(--color_second_dark);
+  transition: .5s;
 }
 
 }
