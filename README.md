@@ -7,17 +7,20 @@
 📍**Adaptabilidad y Responsividad:** Mi portafolio está diseñado para verse y funcionar bien en una variedad de dispositivos y tamaños de pantalla, desde computadoras de escritorio hasta dispositivos móviles.  <br>
 
 # Demo:
-**!Phone 13 PRO** (390px x 844px)<br>
-![image](![image](https://github.com/user-attachments/assets/c28a9c2d-72b1-459f-9e1e-365cc5dbc299) <br>
+**¡Phone 14 Plus** (428px x 926px)<br>
+![image](![image](https://github.com/user-attachments/assets/ea224f67-69fe-4878-a233-8b08f15037ab) <br>
 
 **Galaxy Z Flip 3** (360px x 880px)<br>
-![image](https://github.com/M-VictoriaCM/Portfolio/assets/70769530/ea359f39-948e-4df6-a83c-4645a525bb48) <br>
+![image](![image](https://github.com/user-attachments/assets/9cd191de-98ab-41d4-bd0c-22d3a5302cb6) <br>
  
-**!Pad PRO 11** (834px x 1194px) <br>
-![image](https://github.com/M-VictoriaCM/Portfolio/assets/70769530/bf07a64c-d19b-45df-9c20-aa27bbeaaa36) <br>
+**Huawei P30 PRO** (360px x 780px) <br>
+![image](![image](https://github.com/user-attachments/assets/aa3b63d0-2655-472e-9575-12b63dd7e611) <br>
+
+**¡Pad Air 4** (820px x 1180px)<br>
+![image](![image](![image](https://github.com/user-attachments/assets/ec6f5be3-3263-4410-8d80-68b421a7ceca) <br>
 
 **Macbook Air** (1280px x 800px) <br>
-![image](https://github.com/M-VictoriaCM/Portfolio/assets/70769530/7fb5987b-76e5-4521-8757-50b9c00a29ff) <br>
+![image](![image](https://github.com/user-attachments/assets/48d9e821-6907-4ab1-a185-d028b185348b) <br>
 
 # Tecnologías Utilizadas 🛠️
 * Vue.js
@@ -26,6 +29,9 @@
 * JavaScript
 * Bootstrap
 * Git
+
+# Librerias 📚
+* ![AOS Animate On Scroll Library](https://michalsnik.github.io/aos/)
 
 # Ejecutando las pruebas ⚙️
 
