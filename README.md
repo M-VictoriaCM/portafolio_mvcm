@@ -8,19 +8,19 @@
 
 # Demo:
 **¡Phone 14 Plus** (428px x 926px)<br>
-![Phone 14 Plus](![image](https://github.com/user-attachments/assets/ea224f67-69fe-4878-a233-8b08f15037ab) <br>
+(![image](https://github.com/user-attachments/assets/ea224f67-69fe-4878-a233-8b08f15037ab) <br>
 
 **Galaxy Z Flip 3** (360px x 880px)<br>
-![image](![image](https://github.com/user-attachments/assets/9cd191de-98ab-41d4-bd0c-22d3a5302cb6) <br>
+(![image](https://github.com/user-attachments/assets/9cd191de-98ab-41d4-bd0c-22d3a5302cb6) <br>
  
 **Huawei P30 PRO** (360px x 780px) <br>
-![image](![image](https://github.com/user-attachments/assets/aa3b63d0-2655-472e-9575-12b63dd7e611) <br>
+(![image](https://github.com/user-attachments/assets/aa3b63d0-2655-472e-9575-12b63dd7e611) <br>
 
 **¡Pad Air 4** (820px x 1180px)<br>
-![image](![image](![image](https://github.com/user-attachments/assets/ec6f5be3-3263-4410-8d80-68b421a7ceca) <br>
+(![image](https://github.com/user-attachments/assets/ec6f5be3-3263-4410-8d80-68b421a7ceca) <br>
 
 **Macbook Air** (1280px x 800px) <br>
-![image](![image](https://github.com/user-attachments/assets/48d9e821-6907-4ab1-a185-d028b185348b) <br>
+(![image](https://github.com/user-attachments/assets/48d9e821-6907-4ab1-a185-d028b185348b) <br>
 
 # Tecnologías Utilizadas 🛠️
 * Vue.js
@@ -31,7 +31,7 @@
 * Git
 
 # Librerias 📚
-* ![AOS Animate On Scroll Library](https://michalsnik.github.io/aos/)
+* !(link)[AOS Animate On Scroll Library](https://michalsnik.github.io/aos/)
 
 # Ejecutando las pruebas ⚙️
 
