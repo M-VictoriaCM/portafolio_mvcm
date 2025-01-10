@@ -217,6 +217,10 @@ export default {
         flex-direction: row;
         align-items: center;
     }
+    .logo {
+        width: var(--m-40);
+        height: var(--m-40);
+    }
 
     .nav__name_logo {
         display: block;
