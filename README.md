@@ -8,7 +8,7 @@
 
 # Demo:
 **!Phone 13 PRO** (390px x 844px)<br>
-![image](https://github.com/M-VictoriaCM/Portfolio/assets/70769530/a29019aa-156a-441b-b151-252158bf3f66) <br>
+![image](![image](https://github.com/user-attachments/assets/c28a9c2d-72b1-459f-9e1e-365cc5dbc299) <br>
 
 **Galaxy Z Flip 3** (360px x 880px)<br>
 ![image](https://github.com/M-VictoriaCM/Portfolio/assets/70769530/ea359f39-948e-4df6-a83c-4645a525bb48) <br>
