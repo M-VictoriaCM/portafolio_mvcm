@@ -16,6 +16,10 @@
   /* color iconos*/
   --color_icon_inactive: rgb(217, 217, 217, 0.6);
 
+  --blur: 1rem;
+    --fs: clamp(3rem, 8vw, 7rem);
+    --ls: clamp(-1.75px, -0.25vw,-3.5px);
+
   /* margenes */
   --m-4: 0.25rem;
   --m-8: 0.5rem;
