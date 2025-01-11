@@ -14,7 +14,7 @@ export default {
             opcion:'Portafolio',
             navItems: [
                 { name: "Home", iconClass: "fa-solid fa-house", link: "/" },
-                { name: "Skills", iconClass: "fa-solid fa-book", link: "/skills" },
+                { name: "Skills", iconClass: "fa-solid fa-book", link: "/Skills" },
                 { name: "Contacto", iconClass: "fa-solid fa-paper-plane", link: "/contactme" },
                 { name: "Perfil", iconClass: "fa-solid fa-circle-user", link: "/profile" },
             ],
