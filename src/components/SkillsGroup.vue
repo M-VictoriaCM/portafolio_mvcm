@@ -1,25 +1,25 @@
 <script>
-import TitleSkills from '../components/TitleSkills.vue'
-import CardSkill from './CardSkill.vue'
+import TitleSkills from "../components/TitleSkills.vue";
+import CardSkill from "./CardSkill.vue";
 
 export default {
-  name: 'SkillsGroup',
+  name: "SkillsGroup",
   components: { TitleSkills, CardSkill },
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     icon: {
       type: String,
-      required: true
+      required: true,
     },
     skills: {
       type: Array,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <template>

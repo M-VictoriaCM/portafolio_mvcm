@@ -1,22 +1,20 @@
-<script>
-import Header from './components/Header.vue';
-export default {
-    name:'App',
-    components:{Header}
-}
-</script>
-
 <template>
-<div class="grid__container">
+  <div class="grid__container">
     <Header></Header>
     <main class="content">
-        <section class="section" id="home">
+      <section id="home" class="section">
         <RouterView />
-    </section>
+      </section>
     </main>
-        
-    </div>
+  </div>
 </template>
 
-<style scoped>
-</style>
+<script>
+import Header from "./components/Header.vue";
+export default {
+  name: "App",
+  components: { Header },
+};
+</script>
+
+<style scoped></style>

@@ -27,10 +27,13 @@
 # Dependencias 📚
 * [AOS Animate On Scroll Library](https://michalsnik.github.io/aos/)
 * [typed-js](https://github.com/mattboldt/typed.js?tab=readme-ov-file)
+* [DOMPurify](https://www.npmjs.com/package/dompurify)
+* [Linter & Prettier](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)
 
 # Ejecutando las pruebas ⚙️
 
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
+
 
 # Instalación ⚙️
 Clona el repositorio:
