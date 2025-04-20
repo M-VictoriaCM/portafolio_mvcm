@@ -10,7 +10,7 @@ export default {
 </script>
 <template>
   <li class="nav__item">
-    <router-link
+    <RouterLink
       :to="link"
       class="nav__link"
       active-class="nav__link--active"
@@ -18,6 +18,6 @@ export default {
     >
       <i :class="iconClass" class="nav__icon"></i>
       <span class="nav__name">{{ name }}</span>
-    </router-link>
+    </RouterLink>
   </li>
 </template>

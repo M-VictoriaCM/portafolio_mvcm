@@ -84,10 +84,9 @@ export default {
 @media (min-width: 768px) and (max-width: 991px) {
   .profile__img {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    width: 100%;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
   }
 
   .profile__frame {

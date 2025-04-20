@@ -1,66 +1,4 @@
-<script>
-import SkillsGroup from "../components/SkillsGroup.vue";
-import img1 from "../assets/img/html_icon.webp";
-import img2 from "../assets/img/css_icon.webp";
-import img3 from "../assets/img/js_icon.webp";
-import img4 from "../assets/img/vue_icon.webp";
-import img5 from "../assets/img/python_icon.webp";
-import img6 from "../assets/img/java_icon.webp";
-import img7 from "../assets/img/php_icon.webp";
-import img8 from "../assets/img/flask_icon.webp";
-import img9 from "../assets/img/django_icon.webp";
-import img10 from "../assets/img/go_icon.webp";
-import img11 from "../assets/img/spring_icon.webp";
-import img12 from "../assets/img/mysql_icon.webp";
-import img13 from "../assets/img/postgresql_icon.webp";
-import img14 from "../assets/img/mongodb_icon.webp";
-import img15 from "../assets/img/photoshop_icon.webp";
-import img16 from "../assets/img/figma_icon.webp";
-import img17 from "../assets/img/canva_icon.webp";
-import img18 from "../assets/img/git_icon.webp";
-import img19 from "../assets/img/github_icon.webp";
-import img20 from "../assets/img/confluence_icon.webp";
-import img21 from "../assets/img/jira_icon.webp";
-import img22 from "../assets/img/power_bi_icon.webp";
-import img23 from "../assets/img/bootstrap_icon.webp";
-import img24 from "../assets/img/postman_icon.webp";
-import img25 from "../assets/img/angular_icon.webp";
-export default {
-  name: "Skills",
-  components: {
-    SkillsGroup,
-  },
-  data() {
-    return {
-      img1,
-      img2,
-      img3,
-      img4,
-      img5,
-      img6,
-      img7,
-      img8,
-      img9,
-      img10,
-      img11,
-      img12,
-      img13,
-      img14,
-      img15,
-      img16,
-      img17,
-      img18,
-      img19,
-      img20,
-      img21,
-      img22,
-      img23,
-      img24,
-      img25,
-    };
-  },
-};
-</script>
+
 <template>
   <div class="skills__container">
     <!--------------- Skills: Frontend --------------->
@@ -124,6 +62,70 @@ export default {
     />
   </div>
 </template>
+<script>
+import SkillsGroup from "../components/SkillsGroup.vue";
+import img1 from "../assets/img/html_icon.webp";
+import img2 from "../assets/img/css_icon.webp";
+import img3 from "../assets/img/js_icon.webp";
+import img4 from "../assets/img/vue_icon.webp";
+import img5 from "../assets/img/python_icon.webp";
+import img6 from "../assets/img/java_icon.webp";
+import img7 from "../assets/img/php_icon.webp";
+import img8 from "../assets/img/flask_icon.webp";
+import img9 from "../assets/img/django_icon.webp";
+import img10 from "../assets/img/go_icon.webp";
+import img11 from "../assets/img/spring_icon.webp";
+import img12 from "../assets/img/mysql_icon.webp";
+import img13 from "../assets/img/postgresql_icon.webp";
+import img14 from "../assets/img/mongodb_icon.webp";
+import img15 from "../assets/img/photoshop_icon.webp";
+import img16 from "../assets/img/figma_icon.webp";
+import img17 from "../assets/img/canva_icon.webp";
+import img18 from "../assets/img/git_icon.webp";
+import img19 from "../assets/img/github_icon.webp";
+import img20 from "../assets/img/confluence_icon.webp";
+import img21 from "../assets/img/jira_icon.webp";
+import img22 from "../assets/img/power_bi_icon.webp";
+import img23 from "../assets/img/bootstrap_icon.webp";
+import img24 from "../assets/img/postman_icon.webp";
+import img25 from "../assets/img/angular_icon.webp";
+export default {
+  name: "Skills",
+  components: {
+    SkillsGroup,
+  },
+  data() {
+    return {
+      img1,
+      img2,
+      img3,
+      img4,
+      img5,
+      img6,
+      img7,
+      img8,
+      img9,
+      img10,
+      img11,
+      img12,
+      img13,
+      img14,
+      img15,
+      img16,
+      img17,
+      img18,
+      img19,
+      img20,
+      img21,
+      img22,
+      img23,
+      img24,
+      img25,
+    };
+  },
+};
+</script>
+
 <style>
 .skills__container,
 .skills__header {

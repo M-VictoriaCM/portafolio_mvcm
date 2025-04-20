@@ -1,11 +1,51 @@
+<script>
+import logo from "../assets/img/logo_sitio_web_victoria.webp";
+import NavigationItems from "./NavigationItems.vue";
+import { animateMenu } from "../assets/js/animation.js";
+import { RouterLink, RouterView } from "vue-router";
+export default {
+  name: "Header",
+  components: {
+    NavigationItems, RouterLink, RouterView
+  },
+  data() {
+    return {
+      logo,
+      nombre: "ictoria",
+      opcion: "Portafolio",
+      navItems: [
+        { name: "Home", iconClass: "fa-solid fa-house", link: "/" },
+        { name: "Skills", iconClass: "fa-solid fa-book", link: "/skills" },
+        {
+          name: "Contacto",
+          iconClass: "fa-solid fa-paper-plane",
+          link: "/contactme",
+        },
+        {
+          name: "Perfil",
+          iconClass: "fa-solid fa-circle-user",
+          link: "/profile",
+        },
+      ],
+      isMenuVisible: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      animateMenu();
+      this.isMenuVisible = !this.isMenuVisible;
+    },
+  },
+};
+</script>
 
 <template>
   <header id="header" class="header">
     <nav class="nav container">
-      <router-link :to="{ name: 'Home' }" class="nav_logo">
+      <RouterLink :to="{ name: 'Home' }" class="nav_logo">
         <img :src="logo" class="logo" alt="" />
         <span class="nav__name_logo">{{ nombre }}</span>
-      </router-link>
+      </RouterLink>
       <div class="bars__menu" @click="toggleMenu">
         <span class="line1__bars-menu"></span>
         <span class="line2__bars-menu"></span>
@@ -28,15 +68,15 @@
         </div>
         <div class="nav__list2">
           <li class="nav__item">
-            <router-link
-              to="/portafolio"
+            <RouterLink
+              to="/portfolio"
               class="nav__link"
               active-class="nav__link--active"
               exact-active-class="nav__link--exact-active"
             >
               <i class="fa-solid fa-briefcase nav__icon"></i>
               <span class="nav__name">{{ opcion }}</span>
-            </router-link>
+            </RouterLink>
           </li>
         </div>
         <div class="container-menu__theme">
@@ -50,47 +90,8 @@
       </div>
     </nav>
   </header>
+  
 </template>
-
-<script>
-import logo from "../assets/img/logo_sitio_web_victoria.webp";
-import NavigationItems from "./NavigationItems.vue";
-import { animateMenu } from "../assets/js/animation.js";
-export default {
-  name: "Header",
-  components: {
-    NavigationItems,
-  },
-  data() {
-    return {
-      logo,
-      nombre: "ictoria",
-      opcion: "Portafolio",
-      navItems: [
-        { name: "Home", iconClass: "fa-solid fa-house", link: "/" },
-        { name: "Skills", iconClass: "fa-solid fa-book", link: "/Skills" },
-        {
-          name: "Contacto",
-          iconClass: "fa-solid fa-paper-plane",
-          link: "/contactme",
-        },
-        {
-          name: "Perfil",
-          iconClass: "fa-solid fa-circle-user",
-          link: "/Profile",
-        },
-      ],
-      isMenuVisible: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      animateMenu();
-      this.isMenuVisible = !this.isMenuVisible;
-    },
-  },
-};
-</script>
 
 <style>
 .header,

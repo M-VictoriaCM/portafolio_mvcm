@@ -50,7 +50,7 @@ export default {
 <style>
 .container__profile {
   width: 100%;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   border: 1px solid orange;
   display: flex;
   flex-direction: column;
@@ -128,7 +128,21 @@ h3 {
   color: rgba(251, 251, 254, 0.4);
 }
 
+@media (max-width: 768px) {/*para que no se rompa en iphone */
+  .container__profile {
+    min-height: 100dvh;
+  }
+}
+
+
 @media (min-width: 768px) and (max-width: 991px) {
+  .container__profile {
+    justify-content: center;
+
+  }
+  .profile__header {
+    justify-content: space-between;
+  }
   .container__avatar_profile {
     width: var(--section-tablet);
   }
