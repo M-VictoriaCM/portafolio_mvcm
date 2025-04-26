@@ -1,23 +1,22 @@
 <script>
-import { RouterView } from "vue-router";
-import Header from "./components/Header.vue";
+import Header from './components/Header.vue';
 export default {
-  name: "App",
-  components: { Header, RouterView },
-};
+    name:'App',
+    components:{Header}
+}
 </script>
 
 <template>
-  <div class="grid__container">
+<div class="grid__container">
     <Header></Header>
     <main class="content">
-      <section id="home" class="section">
-        <RouterView/>
-      </section>
+        <section class="section" id="home">
+        <RouterView />
+    </section>
     </main>
-  </div>
+        
+    </div>
 </template>
 
-
-
-<style scoped></style>
+<style scoped>
+</style>
