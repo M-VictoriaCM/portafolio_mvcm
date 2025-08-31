@@ -1,67 +1,3 @@
-
-<template>
-  <div class="skills__container">
-    <!--------------- Skills: Frontend --------------->
-    <SkillsGroup
-      title="Frontend"
-      icon="fa-solid fa-laptop-code"
-      :skills="[
-        { id: 1, name: 'HTML', src: img1 },
-        { id: 2, name: 'Css', src: img2 },
-        { id: 3, name: 'JavaScript', src: img3 },
-        { id: 4, name: 'Vue', src: img4 },
-        { id: 5, name: 'Angular', src: img25 },
-      ]"
-    />
-
-    <!--------------- Skills: Backend --------------->
-    <SkillsGroup
-      title="Backend"
-      icon="fa-solid fa-server"
-      :skills="[
-        { id: 1, name: 'Python', src: img5 },
-        { id: 2, name: 'Java', src: img6 },
-        { id: 3, name: 'PHP', src: img7 },
-        { id: 4, name: 'Flask', src: img8 },
-        { id: 5, name: 'Django', src: img9 },
-        { id: 6, name: 'Go', src: img10 },
-        { id: 7, name: 'Spring', src: img11 },
-      ]"
-    />
-    <!--------------- Skills: DataBase --------------->
-    <SkillsGroup
-      title="DataBase"
-      icon="fa-solid fa-database "
-      :skills="[
-        { id: 1, name: 'MySql', src: img12 },
-        { id: 2, name: 'PostgreSql', src: img13 },
-        { id: 3, name: 'MongoDB', src: img14 },
-      ]"
-    />
-    <SkillsGroup
-      title="Desing"
-      icon="fa-solid fa-swatchbook "
-      :skills="[
-        { id: 1, name: 'Photoshop', src: img15 },
-        { id: 2, name: 'Figma', src: img16 },
-        { id: 3, name: 'Canva', src: img17 },
-      ]"
-    />
-    <SkillsGroup
-      title="Tools"
-      icon="fa-solid fa-screwdriver-wrench"
-      :skills="[
-        { id: 1, name: 'Git', src: img18 },
-        { id: 2, name: 'Github', src: img19 },
-        { id: 3, name: 'Confluence', src: img20 },
-        { id: 4, name: 'Jira', src: img21 },
-        { id: 5, name: 'Power Bi', src: img22 },
-        { id: 6, name: 'Bootstrap', src: img23 },
-        { id: 7, name: 'Postman', src: img24 },
-      ]"
-    />
-  </div>
-</template>
 <script>
 import SkillsGroup from "../components/SkillsGroup.vue";
 import img1 from "../assets/img/html_icon.webp";
@@ -126,20 +62,80 @@ export default {
 };
 </script>
 
+<template>
+  <div class="skills__container">
+    <!--------------- Skills: Frontend --------------->
+    <SkillsGroup
+      title="Frontend"
+      icon="fa-solid fa-laptop-code"
+      :skills="[
+        { id: 1, name: 'HTML', src: img1 },
+        { id: 2, name: 'Css', src: img2 },
+        { id: 3, name: 'JavaScript', src: img3 },
+        { id: 4, name: 'Vue', src: img4 },
+        { id: 5, name: 'Angular', src: img25 },
+      ]"
+    />
+
+    <!--------------- Skills: Backend --------------->
+    <SkillsGroup
+      title="Backend"
+      icon="fa-solid fa-server"
+      :skills="[
+        { id: 1, name: 'Python', src: img5 },
+        { id: 2, name: 'Java', src: img6 },
+        { id: 3, name: 'PHP', src: img7 },
+        { id: 4, name: 'Flask', src: img8 },
+        { id: 5, name: 'Django', src: img9 },
+        { id: 6, name: 'Go', src: img10 },
+        { id: 7, name: 'Spring', src: img11 },
+      ]"
+    />
+    <!--------------- Skills: DataBase --------------->
+    <SkillsGroup
+      title="DataBase"
+      icon="fa-solid fa-database "
+      :skills="[
+        { id: 1, name: 'MySql', src: img12 },
+        { id: 2, name: 'PostgreSql', src: img13 },
+        { id: 3, name: 'MongoDB', src: img14 },
+      ]"
+    />
+    <SkillsGroup
+      title="Desing"
+      icon="fa-solid fa-swatchbook "
+      :skills="[
+        { id: 1, name: 'Photoshop', src: img15 },
+        { id: 2, name: 'Figma', src: img16 },
+        { id: 3, name: 'Canva', src: img17 },
+      ]"
+    />
+    <SkillsGroup
+      title="Tools"
+      icon="fa-solid fa-screwdriver-wrench"
+      :skills="[
+        { id: 1, name: 'Git', src: img18 },
+        { id: 2, name: 'Github', src: img19 },
+        { id: 3, name: 'Confluence', src: img20 },
+        { id: 4, name: 'Jira', src: img21 },
+        { id: 5, name: 'Power Bi', src: img22 },
+        { id: 6, name: 'Bootstrap', src: img23 },
+        { id: 7, name: 'Postman', src: img24 },
+      ]"
+    />
+  </div>
+</template>
+
 <style>
-.skills__container,
 .skills__header {
   display: flex;
 }
 .skills__container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: calc(100% - 4rem);
-  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
-
 .skills__header {
   width: 90%;
   flex-direction: row;
@@ -168,6 +164,9 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+  .skills__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
   .skills__icon {
     font-size: var(--m-64);
   }

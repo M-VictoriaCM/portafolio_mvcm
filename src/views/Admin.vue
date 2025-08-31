@@ -1,65 +1,70 @@
 <script setup>
-import { ref } from 'vue';
-import { api } from '../plugin/axios';
-const token = ref(' ');
-const expiresIn =ref(' ');
+import { useUserStore } from '../stores/user-store';
+import { useCategoryStore } from '../stores/category-store';
+import { useRouter } from 'vue-router';
+import CreateCategoryForm from '../components/CRUD/CreateCategoryForm.vue';
+const userStore = useUserStore();
+const router = useRouter();
 
-const access = async()=>{
-    try{
-        const res= await api.post("users/login",{
-            email:"mvittoria7@gmail.com",
-            password:"pweaskjdlxkmas2"
-        })
-        console.log(res.data);
-        token.value = res.data.token;
-        expiresIn.value = res.data.expiresIn;
-        setTime();
-    }catch(error){
-        console.log(error);
-    }
+const logout = () => {
+    router.push('/login');
+    console.log("Cerrando sesión");
+    alert("Sesión cerrada exitosamente");
+    userStore.logout();
+};
+const access = () => {
+    userStore.access();
 }
+const categoryStore = useCategoryStore();
+categoryStore.fetchAllCategories();
 
-const setTime = () => {
-    setTimeout(()=>{
-        refreshToken()},
-        expiresIn.value * 1000 -6000
-    )
-}
-const refreshToken =async()=>{
-    try {
-        const res =await api.get('/users/refresh')
-        console.log(res.data);
-        token.value = res.data.token;
-        expiresIn.value = res.data.expiresIn;
-        setTime();
-    } catch (error) {
-        console.log(error);
-    }
-}
-refreshToken();
 </script>
 
 <template>
     <div class="container">
-        <h1>Admin</h1>
-        <p>Welcome to the admin page!</p>
-        <p>Here you can manage your website content.</p>
-        <button type="button" class="btn btn-primary" @click="access">Login</button>
-        <div class="col-md-6">
-            {{token}} - {{ expiresIn }}
-        </div>
+        <h1>Página de Pruebas</h1>
+
+        <button type="button" class="btn btn-primary" @click="access()" v-if="!userStore.token">Login </button>
+
+        <button type="button" class="btn btn-primary" @click="logout()" v-if="userStore.token">Cerrar Sesion
+        </button>
+
+        <router-link to="/protected" class="btn btn-primary" v-if="userStore.token" @click="userStore.protected">
+            Protected
+        </router-link>
+
+        <CreateCategoryForm v-if="userStore.token"/>
+       
+        {{ categoryStore.categories }}
+       
     </div>
 </template>
+
 <style scoped>
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    color: white;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
-.col-md-6 { 
-    width:280px;
+
+.debug-info {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background: #42b983;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
 }
 </style>

@@ -19,13 +19,13 @@ export default {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .skills__title {
-    font-size: var(--m-48);
+    font-size: var(--m-36);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .skills__title {
-    font-size: var(--m-64);
+    font-size: var(--m-36);
   }
 
   .skills__title {

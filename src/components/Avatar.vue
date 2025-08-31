@@ -1,11 +1,3 @@
-<template>
-  <div class="profile__img" data-aos="fade-right">
-    <div class="profile__frame"></div>
-    <div class="profile__frame-img">
-      <img :src="avatar" alt="avatar" />
-    </div>
-  </div>
-</template>
 <script>
 import avatar from "../assets/img/avatar1.webp";
 export default {
@@ -17,6 +9,15 @@ export default {
   },
 };
 </script>
+
+<template>
+  <div class="profile__img" data-aos="fade-right">
+    <div class="profile__frame"></div>
+    <div class="profile__frame-img">
+      <img :src="avatar" alt="avatar" />
+    </div>
+  </div>
+</template>
 
 <style>
 .profile__img {
@@ -82,13 +83,6 @@ export default {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .profile__img {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-  }
-
   .profile__frame {
     width: 16rem;
     height: 16rem;
@@ -97,6 +91,18 @@ export default {
 
   .profile__frame-img > img {
     width: 15.9rem;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .profile__frame {
+    width: 18rem;
+    height: 18rem;
+    animation: animate 15s linear infinite;
+  }
+
+  .profile__frame-img > img {
+    width: 17.9rem;
     height: auto;
   }
 }

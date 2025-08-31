@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "title": "Te Invite 🎉",
+    "shortDescription": "Landing page de tarjetas digitales personalizadas.",
+    "fullDescription": "Una landing page que permite a los usuarios explorar distintos modelos de tarjetas digitales y ponerse en contacto para solicitar diseños personalizados. El sitio está pensado como una herramienta práctica y moderna para quienes buscan reemplazar las invitaciones tradicionales por una opción más creativa y digital.",
+    "cardImage": "../teinvite.png",
+    "modalImage": "../teinvite.png",
+    "objetivo": "Facilitar la creación y visualización de tarjetas digitales, ofreciendo a los usuarios una experiencia sencilla para:",
+    "características": [
+      "Vista de modelos de tarjetas digitales.",
+      "Ctacto directo para solicitar presupuestos y encargos personalizados.",
+      "Diseño responsive, adaptado a dispositivos móviles y escritorio.", 
+      "Preparado para integrar nuevas funcionalidades (ej: backend para gestión de pedidos)."
+    ],
+    "technologies": ["Vue.js", "Vite", "HTML", "CSS", "JavaScript"],
+    "demoUrl": "https://teinvite.ar/",
+    "githubUrl": "https://github.com/M-VictoriaCM/te-invite"
+  },
+  {
+    "id": 2,
+    "title": "Gestor de Tareas",
+    "shortDescription": "App web para organizar tareas diarias.",
+    "fullDescription": "Un gestor de tareas con funcionalidades de agregar, editar, eliminar y marcar como completadas. Incluye persistencia en localStorage y una interfaz limpia y moderna.",
+    "cardImage": "/images/projects/tasks-card.png",
+    "modalImage": "/images/projects/tasks-modal.png",
+    "technologies": ["Vue.js", "Bootstrap", "LocalStorage"],
+    "demoUrl": "",
+    "githubUrl": "https://github.com/M-VictoriaCM/task-manager"
+  }
+]

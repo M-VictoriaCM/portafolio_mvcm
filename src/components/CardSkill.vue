@@ -32,7 +32,7 @@ export default {
 .skills__info_container {
   width: 52px;
   height: 52px;
-  background: var(--body_dark);
+  background: #161a2e;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -73,50 +73,9 @@ export default {
 
 .name__skills {
   font-size: 0.875rem;
-  color: aliceblue;
+  color: var(--color_font);
   margin-top: var(--m-4);
   text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .skills__info_container {
-    width: 100px;
-    height: 100px;
-  }
-
-  .skills__info_container::before {
-    width: 104px;
-    height: 104px;
-  }
-
-  .skills__img {
-    width: var(--m-64);
-  }
-
-  .name__skills {
-    font-size: var(--m-20);
-    margin-top: var(--m-8);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .skills__info_container {
-    width: 90px;
-    height: 90px;
-  }
-
-  .skills__info_container::before {
-    width: 95px;
-    height: 95px;
-  }
-
-  .skills__img {
-    width: var(--m-44);
-  }
-
-  .name__skills {
-    font-size: var(--m-20);
-    margin-top: var(--m-12);
-  }
-}
 </style>
